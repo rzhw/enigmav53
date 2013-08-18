@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ENIGMA Development Environment</title>
+    <link href="normalize.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300);
+
+        body {
+            font-family: "open sans", sans-serif;
+            color: #222;
+        }
+
+        h1, h2 {
+            font-weight: 300;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        /* replace this with clearfix mixin for final site */
+        .clear {
+            clear: both;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 50px 0;
+            width: 940px;
+        }
+
+        #header {
+            width: 100%;
+            background: #3f3f3f;
+        }
+        #header .container {
+            padding: 20px 0;
+            height: 30px;
+        }
+        #logo {
+            width: 30px;
+            height: 30px;
+        }
+        #menu {
+            display: inline-block;
+            vertical-align: top;
+        }
+        #menu ul {
+            margin: 2px 10px;
+            padding: 0;
+            list-style: none;
+        }
+        #menu ul li {
+            float: left;
+        }
+        #menu ul li a {
+            padding: 0 10px;
+            color: #ddd;
+            text-decoration: none;
+            font-size: 11px;
+        }
+
+        #hero {
+            width: 100%;
+            background: url("forumbg.png");
+        }
+        #hero .container {
+            font-weight: 300;
+            text-align: center;
+        }
+        #hero h1 {
+            font-size: 40px;
+        }
+        #hero p {
+            font-size: 20px;
+        }
+        #hero span {
+            display: block;
+        }
+        #hero-buttons {
+            margin-left: 120px;
+        }
+        #hero-buttons ul {
+            list-style: none;
+            padding: 0;
+        }
+        #hero-buttons ul li:first-child a {
+            border-radius: 999px 0 0 999px;
+        }
+        #hero-buttons ul li:last-child a {
+            border-radius: 0 999px 999px 0;
+        }
+        #hero-buttons ul li {
+            margin: 40px 0 -95px 0;
+            float: left;
+        }
+        #hero-buttons ul li a {
+            display: block;
+            padding: 15px 0;
+            width: 180px;
+            height: 65px;
+            color: #fff;
+            text-decoration: none;
+            box-shadow: 0 0 16px rgba(255,255,255,.2);
+        }
+        #hero-buttons ul li a .icon {
+            display: block;
+            font-size: 40px;
+        }
+        #hero-about a {
+            background: #6f98bf;
+        }
+        #hero-download a {
+            background: #70be6f;
+        }
+        #hero-documentation a {
+            background: #bebd6f;
+        }
+        #hero-community a {
+            background: #be6f70;
+        }
+
+        #news {
+            background: #eee;
+        }
+        #news .container {
+            padding: 50px 0;
+        }
+        #news h1 {
+            font-size: 20px;
+        }
+        #news-first {
+            float: left;
+            margin-right: 20px;
+            width: 540px;
+        }
+        #news .news-article .date,
+        #news .news-article .body {
+            float: left;
+        }
+        #news .news-article .date {
+            width: 45px;
+            margin-right: 5px;
+            text-align: center;
+        }
+        #news .news-article .date .month {
+            color: #aaa;
+            font-size: 10px;
+        }
+        #news .news-article .date .day {
+            font-size: 16px;
+        }
+        #news .news-article .body {
+            width: 490px;
+            font-size: 13px;
+            color: #555;
+        }
+        #news .news-article .body h2 {
+            margin: 0 0 10px;
+            font-size: inherit;
+        }
+        #news .news-article .body a {
+            color: inherit;
+            font-weight: 600;
+            transition: .3s all;
+            color: #333;
+        }
+        #news .news-article .body a:hover {
+            color: #be6f70;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <img id="logo" src="ENIGMA_Logo_flat.png">
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Wiki</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">EDC</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Tracker</a></li>
+                    <li><a href="#">Progress</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="hero">
+        <div class="container">
+            <h1>Game development for all.</h1>
+            <p>
+                <span>ENIGMA aims to be simple, fast and free game creation.</span>
+                <span>Cross platform, open source, developed by a global community.</span>
+            </p>
+            <nav id="hero-buttons">
+                <ul>
+                    <li id="hero-about">
+                        <a href="#"><i class="icon icon-info"></i>Learn more</a>
+                    </li>
+                    <li id="hero-download">
+                        <a href="#"><i class="icon icon-download-alt"></i>Try it out</a>
+                    </li>
+                    <li id="hero-documentation">
+                        <a href="#"><i class="icon icon-file-text-alt"></i>Documentation</a>
+                    </li>
+                    <li id="hero-community">
+                        <a href="#"><i class="icon icon-group"></i>Community</a>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </nav>
+        </div>
+    </div>
+    <div id="news">
+        <div class="container">
+            <h1>What's new</h1>
+            <div id="news-first" class="news-article">
+                <div class="date">
+                    <div class="month">JUL</div>
+                    <div class="day">29</div>
+                </div>
+                <div class="body">
+                    <h2><a href="#">DirectX 9 Implemented and Working!</a></h2>
+                    After trying this several times with DirectX 10 and failing, I decided to give DX one more chance to be a part of our game engine, and it finally worked with DX9. The headers and libraries are distributed with MingW for DX9 so no need to install the Windows or DirectX SDK, if you are on Windows you will...
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+</html>
